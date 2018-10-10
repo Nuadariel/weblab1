@@ -41,6 +41,8 @@ if(isset($_GET['id']))
 			echo'Role:';
 			echo $myrow["role"].'<br>';
 			echo '<br>';
+			echo'Avatar:';
+			echo '<img src= '.$myrow["avatarPatch"].'><br>';
 			echo'Login:';
 			echo'<input type="text" name="login" id="log" value='.htmlspecialchars($myrow["login"]).'><br>';
 			echo '<br>';
@@ -58,6 +60,8 @@ if(isset($_GET['id']))
 		}
 		else
 		{
+			echo'Avatar:';
+			echo '<img src= '.$myrow["avatarPatch"].'><br>';
 			echo'Login:';
 			echo $myrow["login"].'<br>';
 			echo '<br>';
@@ -74,6 +78,8 @@ if(isset($_GET['id']))
 	}
 	else
 	{
+		echo'Avatar:';
+		echo '<img src= '.$myrow["avatarPatch"].'><br>';
 		echo'Login:';
 		echo $myrow["login"].'<br>';
 		echo '<br>';
@@ -93,7 +99,7 @@ else
 	echo'<form name="save" action="save.php" method="post">';
 	echo'Role:';
 	echo $_SESSION["role"].'<br>';
-	echo '<br>';
+	echo '<br>';	
 	echo'Login:';
 	echo'<input type="text" name="login" id="log" value='.htmlspecialchars($_SESSION["login"]).'><br>';
 	echo '<br>';
@@ -108,8 +114,6 @@ else
 	echo'<input type="submit" value="Save"><p>     </p><a href="delete.php?id='.$_SESSION["id"].'">Delete this</a>';
 	echo'</form>';
 	echo'<br>';
-	/*echo'<h1><img src="photo.png" alt="Photo" width="400" height="300"></h1>';
-	echo'<h2><a href=""><button> Change photo</button></a> </h2>';*/
 }
 ?>
 

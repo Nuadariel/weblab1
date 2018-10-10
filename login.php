@@ -12,7 +12,6 @@
 		}
 		$login = $_POST["login"];
 		$pass = $_POST["pass"];
-		// корректируем введённые данные
 		$login = stripslashes($login);
    		$login = htmlspecialchars($login);
 		$login = trim($login);
@@ -37,11 +36,9 @@
 				$_SESSION['surname'] = $myrow['surname'];
 				$_SESSION['role'] = $myrow['role'];
 				$_SESSION['password'] = $myrow['password'];
-//"SELECT name FROM users WHERE login='$login'"
 				echo "Welcome ".$myrow['name']." ".$myrow['surname']." you logged in as a ".$myrow['role'];
 				header ('Refresh: 3; URL=http://localhost/profile.php');
-				//header ('Location: http://localhost/profile.php');  // перенаправление на нужную страницу
-   				exit();    // прерываем работу скрипта, чтобы забыл о прошлом
+   				exit();
 			}
 			else
 			{

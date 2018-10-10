@@ -16,8 +16,10 @@
   		$users=get_users();
   		foreach ($users as $users) {
       			$table_str.='<tr>';
-      			$table_str.='<td>'.$users->id.'</td><td>'.$users->login.'</td><td>'.$users->role.'</td><td><a href="profile.php?id='.$users->id.'">view_profile</a></td>';
+      			$table_str.='<td><img src= '.$users->avatarPatch.'></td><td>'.$users->id.'</td><td>'.$users->login.'</td><td>'.$users->role.'</td><td><a href="profile.php?id='.$users->id.'">view_profile</a></td>';
       			$table_str.='</tr>';
+				#echo '<img src= '.$users->avatarPatch.'>';
+				
   		}
   		$table_str.='</table>';
   		return   $table_str;
